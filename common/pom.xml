@@ -159,7 +159,7 @@
       </plugin>
 
       <!-- Generate the primitive collections from the template files. -->
-      <plugin>
+<!--       <plugin>
         <groupId>org.codehaus.gmaven</groupId>
         <artifactId>groovy-maven-plugin</artifactId>
         <version>2.0</version>
@@ -187,7 +187,7 @@
             </configuration>
           </execution>
         </executions>
-      </plugin>
+      </plugin> -->
       <plugin>
         <groupId>org.apache.felix</groupId>
         <artifactId>maven-bundle-plugin</artifactId>
