@@ -49,6 +49,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * <p>When not used in a {@link ServerBootstrap} context, the {@link #bind()} methods are useful for connectionless
  * transports such as datagram (UDP).</p>
  */
+//泛型，只是为了返回B
 public abstract class AbstractBootstrap<B extends AbstractBootstrap<B, C>, C extends Channel> implements Cloneable {
 
     volatile EventLoopGroup group;
@@ -295,6 +296,7 @@ public abstract class AbstractBootstrap<B extends AbstractBootstrap<B, C>, C ext
     final ChannelFuture initAndRegister() {
         Channel channel = null;
         try {
+        	//生成channel
             channel = channelFactory.newChannel();
             init(channel);
         } catch (Throwable t) {
